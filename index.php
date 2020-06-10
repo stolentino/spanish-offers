@@ -1,11 +1,14 @@
 <?php
 include 'inc/header.php';
 
-echo '<h1>Welcome to our<br />Treehouse Story Game</h1>';
-echo '<p>Enter the requested words and create your story.</p>';
-echo '<p><a class="btn btn-default btn-lg" href="play.php" role="button">Play</a></p>';
+echo '<h1>Welcome to our<br />ZMOT Spanish Offers</h1>';
+echo '<p>Enter the requested inputs and create your offers.</p>';
+echo '<p class="col-md-4 text-center"><a class="btn btn-default btn-lg" href="play.php" role="button">Play</a></p>';
+echo '<p class="col-md-4 text-center"><a class="btn btn-default btn-lg" href="lease.php" role="button">Lease</a></p>';
+echo '<p class="col-md-4 text-center"><a class="btn btn-default btn-lg" href="rebate.php" role="button">Rebate</a></p>';
 
-echo '<h2>Reread Your Saved Stories</h2>';
+echo '<br />';
+echo '<h2>Recheck Your Offers</h2>';
 if(isset($_COOKIE)){
     foreach($_COOKIE as $key => $value){
         if($key != 'PHPSESSID'){
