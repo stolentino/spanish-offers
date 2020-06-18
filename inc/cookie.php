@@ -7,10 +7,10 @@ if(isset($_GET['save'])){
 
 } elseif (isset($_GET['read'])) {
     $_SESSION['word'] = array_combine(range(1,5), explode(':', $_COOKIE[$_GET['read']]));
-    header('location: /php-story/story.php');
+    header('location: /spa-lease-rebate/story.php');
     exit;
 } elseif (isset($_GET['delete'])){
     setcookie($_GET['delete'], '', time() - 3600, '/');
 }
-header('location: /php-story/index.php');
+header('location: /spa-lease-rebate/index.php');
 exit;
