@@ -16,7 +16,7 @@ echo '<h1>Lease Offer</h1>';
 echo '<br>';
 echo ' TEXT: ';
 echo '<p>Bienvenido a ' . $word1 . ' donde hablamos su idioma!. 
-      Mira este ' . $word2. ' por solo $' .$word3. '/mes mas impuestos, arrendamiento por ' . $word4 . ' meses, $'. $word5 . '
+      Mira este ' . $word2. ' por solo $' .$word3. '/mes mas impuestos, arrendamiento por ' . $word4 . ' meses, $'. number_format($word5) . '
       pago inicial (down payment).  No incluye impuestos, título, licencia, opciones ni cargos del concesionario. 
       Sin depósito de garantía. Para clientes altamente calificados  </p>';
 
@@ -34,10 +34,10 @@ if(!empty($word8)){
     echo 'Stock # ' . $word7 . '. ';
 }
 if(!empty($word6)){
-    echo 'Precio de venta: $' . $word6 . '.';
+    echo 'Precio de venta: $' . number_format($word6) . '.';
 }
 if(!empty($word5)){
-    echo ' $' . $word5 . ' pago inicial (down payment). ';
+    echo ' $' . number_format($word5) . ' pago inicial (down payment). ';
 }
 echo 'No incluye impuestos, título, licencia, opciones ni cargos del concesionario. Sin depósito de garantía. Para
         clientes altamente calificados  </p>';
