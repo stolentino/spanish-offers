@@ -1,6 +1,6 @@
 <?php
 session_start();
-$total = 5;
+$total = 8;
 $page = filter_input(INPUT_GET, 'p', FILTER_SANITIZE_NUMBER_INT);
 if(empty($page)){
 	$_SESSION['word'][1] = '';
@@ -15,7 +15,8 @@ if(isset($_POST['word'])){
 }
 
 if ($page > $total) {
-    header('location: story.php');
+    //header('location: story.php');
+    header('location: lease-offer.php');
     exit;
 }
 
@@ -29,36 +30,58 @@ echo '<div class="form-group form-group-lg">';
 switch ($page) {
     case 2:
         echo '
-            <label class="control-label h2" for="word">Enter a name</label>
-            <input class="form-control" type="text" name="word" id="word" placeholder="Name">
+            <label class="control-label h2" for="word">Enter Year, Make, Model, Trim</label>
+            <input class="form-control" type="text" name="word" id="word" placeholder="ex: 2019 Volkswagen Tiguan S">
+            <p class="help-block">Add Year, Make, Model, Trim</p>
             ';
         break;
     case 3:
         echo '
-            <label class="control-label h2" for="word">Enter a verb ending in -ing</label>
-            <input class="form-control" type="text" name="word" id="word" placeholder="verb-ing">
-            <p class="help-block">An verb is a word used to describe an action, state, or occurrence.</p>
+            <label class="control-label h2" for="word">Enter Monthly Payment</label>
+            <input class="form-control" type="text" name="word" id="word" placeholder="Enter Monthly Payment">
+            <p class="help-block">Enter Lease monthly payment</p>
             ';
         break;
     case 4:
         echo '
-            <label class="control-label h2" for="word">Enter a verb</label>
-            <input class="form-control" type="text" name="word" id="word" placeholder="verb">
-            <p class="help-block">An verb is a word used to describe an action, state, or occurrence.</p>
+            <label class="control-label h2" for="word">Enter length Montly Lease terms.</label>
+            <input class="form-control" type="text" name="word" id="word" placeholder="Enter Length of Lease">
+            <p class="help-block">Enter Length of Lease, common leases are 36 months.</p>
             ';
         break;
     case 5:
-        echo '
-            <label class="control-label h2" for="word">Enter a noun</label>
-            <input class="form-control" type="text" name="word" id="word" placeholder="noun">
-            <p class="help-block">An noun is a word (other than a pronoun) used to identify any of a class of people, places, or things.</p>
-            ';
-        break;
+            echo '
+                <label class="control-label h2" for="word">Enter Initial Downpayment Payment.</label>
+                <input class="form-control" type="text" name="word" id="word" placeholder="Initial Down Payment">
+                <p class="help-block">Enter Down Payment or 0 if none</p>
+                ';
+            break;
+    case 6:
+            echo '
+                <label class="control-label h2" for="word">Enter Sale Price or MSRP if provided.</label>
+                <input class="form-control" type="text" name="word" id="word" placeholder="MSRP or Sales Price">
+                <p class="help-block">Enter Sales price or MSRP. Use Lowest price available</p>
+                ';
+            break;
+    case 7:
+            echo '
+                <label class="control-label h2" for="word">Enter VIN number, if provided.</label>
+                <input class="form-control" type="text" name="word" id="word" placeholder="Enter VIN if any">
+                <p class="help-block">Enter VIN if provided if not leave blank</p>
+                ';
+            break;
+    case 8:
+            echo '
+                <label class="control-label h2" for="word">Enter Stock number, if provided.</label>
+                <input class="form-control" type="text" name="word" id="word" placeholder="Enter Stock if any">
+                <p class="help-block">Enter Stock if provided if not leave blank</p>
+                ';
+            break;
     default:
         echo '
-            <label class="control-label h2" for="word">Enter an adjective</label>
-            <input class="form-control" type="text" name="word" id="word" placeholder="adjective">
-            <p class="help-block">An adjective is a word or phrase naming an attribute, added to a noun to modify or describe it.</p>
+            <label class="control-label h2" for="word">Enter Dealer Name</label>
+            <input class="form-control" type="text" name="word" id="word" placeholder="Dealer Name">
+            <p class="help-block">Enter Client Name, ex Cardinale Volkswagen</p>
             ';
         break;
 }
