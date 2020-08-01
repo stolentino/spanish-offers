@@ -13,31 +13,32 @@ $word8 = htmlspecialchars($_SESSION['word'][8]);
 include 'inc/header.php';
 
 echo '<h1>Lease Offer</h1>';
+echo '<h2>' .$word2. '</h2>';
 echo '<br>';
 echo ' TEXT: ';
-echo '<p>Bienvenido a ' . $word1 . ' donde hablamos su idioma!. 
-      Mira este ' . $word2. ' por solo $' .$word3. '/mes mas impuestos, arrendamiento por ' . $word4 . ' meses, $'. number_format($word5) . '
+echo '<p>Bienvenido a <b>' . $word1 . '</b> donde hablamos su idioma!. 
+      Mira este <b>' . $word2. '</b> por solo $<b>' .$word3. '</b>/mes mas impuestos, arrendamiento por <b>' . $word4 . '</b> meses, $<b>'. number_format($word5) . '</b>
       pago inicial (down payment).  No incluye impuestos, título, licencia, opciones ni cargos del concesionario. 
       Sin depósito de garantía. Para clientes altamente calificados  </p>';
 
 echo '<br>';
 echo ' HEADLINE: ';
-echo '<p>$' . $word3 . '/Mes por ' .$word4. ' Meses </p>';
+echo '<p>$<b>' . $word3 . '</b>/Mes por <b>' .$word4. '</b> Meses </p>';
 
 echo '<br>';
 echo ' DESCRIPTION: ';
 echo '<p>';
 if(!empty($word7)){
-    echo 'VIN # ' . $word7 . '. ';
+    echo 'VIN # <b>' . $word7 . '</b>. ';
 }
 if(!empty($word8)){
-    echo 'Stock # ' . $word7 . '. ';
+    echo 'Stock # <b>' . $word7 . '</b>. ';
 }
 if(!empty($word6)){
-    echo 'Precio de venta: $' . number_format($word6) . '.';
+    echo 'Precio de venta: $<b>' . number_format($word6) . '</b>.';
 }
 if(!empty($word5)){
-    echo ' $' . number_format($word5) . ' pago inicial (down payment). ';
+    echo ' $<b>' . number_format($word5) . '</b> pago inicial (down payment). ';
 }
 echo 'No incluye impuestos, título, licencia, opciones ni cargos del concesionario. Sin depósito de garantía. Para
         clientes altamente calificados  </p>';
