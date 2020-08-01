@@ -14,11 +14,10 @@ if(isset($_POST['word'])){
 	var_dump($_SESSION);
 }
 
-/*if ($page > $total) {
-    //header('location: story.php');
-    header('location: lease-offer.php');
+if ($page > $total) {
+    header('location: rebate-offer.php');
     exit;
-}*/
+}
 
 include 'inc/header.php';
 
