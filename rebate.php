@@ -20,8 +20,8 @@ if ($page > $total) {
 }
 
 include 'inc/header.php';
-
-echo "<h1>Step $page of $total</h1>";
+echo "<h1>Create Rebate Offer</h1>";
+echo "<h2>Step $page of $total</h2>";
 
 echo '<form method="post" action="rebate.php?p=' . ($page+1) .'">';
 echo '<div class="form-group form-group-lg">';
